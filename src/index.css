@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --brand-blue: #3b82f6;
+  --brand-dark: #020617;
+}
+
+body {
+  background-color: var(--brand-dark);
+  color: white;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@theme {
+  --color-brand-blue: #3b82f6;
+  --color-brand-dark: #020617;
+}

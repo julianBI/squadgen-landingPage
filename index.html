@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+
+    <!-- SEO -->
+    <title>SquadGen | Equipos Perfectos con IA</title>
+    <meta name="description"
+        content="Organiza partidos de fútbol equilibrados en segundos con la potencia de Google Gemini. SquadGen: la evolución del balanceo de equipos.">
+    <meta name="keywords" content="fútbol, equipos, balanceo, IA, Gemini, deportes, partido justo">
+    <meta name="author" content="JALC">
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SquadGen">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SquadGen | Equipos Perfectos con IA">
+    <meta property="og:description" content="Organiza partidos de fútbol equilibrados en segundos con Google Gemini.">
+    <meta property="og:image" content="/icons/icon-512.png">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SquadGen SW registered:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('SquadGen SW registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
